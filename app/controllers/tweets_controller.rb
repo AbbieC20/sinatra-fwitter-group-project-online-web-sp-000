@@ -42,6 +42,10 @@ class TweetsController < ApplicationController
     else
       redirect '/login'
     end
+
+    if params["content"].empty?
+      redirect '/tweets/:id/edit'
+    end
   end
 
 
