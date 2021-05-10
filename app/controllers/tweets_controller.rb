@@ -47,15 +47,7 @@ class TweetsController < ApplicationController
   patch "/tweets/:id" do
     @tweet = Tweet.find(params[:id])
     @tweet.update(:content => params[:content])
-    redirect "/tweets/:id" 
-  end
-
-
-
-  patch '/landmarks/:id' do
-    @landmark = Landmark.find(params[:id])
-    @landmark.update(name: params["landmark"]["name"], year_completed: params["landmark"]["year_completed"])
-    redirect to "/landmarks/#{@landmark.id}"
+    redirect "/tweets/:id"
   end
 
 
