@@ -14,8 +14,12 @@ class TweetsController < ApplicationController
   end
 
   post "/tweets" do
-    Tweet.create(:content => params[:content], :user_id => current_user.id)
-    redirect '/tweets'
+    if params["content"].nil?
+      redirect '/tweets/new'
+    else
+      Tweet.create(:content => params[:content], :user_id => current_user.id)
+      redirect '/tweets'
+    end
   end
 
 
