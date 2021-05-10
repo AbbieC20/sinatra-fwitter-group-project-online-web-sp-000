@@ -15,7 +15,7 @@ class TweetsController < ApplicationController
 
   post "/tweets" do
     Tweet.create(:content => params[:content], :user_id => current_user.id)
-    eredirect '/tweets'
+    redirect '/tweets'
   end
 
 
