@@ -13,6 +13,11 @@ class TweetsController < ApplicationController
     erb :'/tweets/new'
   end
 
+  post "/tweets" do
+    new_tweet = Tweet.create(:content => params[:content], :user_id => current_user.id)
+    erb :'/tweets/tweets'
+  end
+
 
 
 
