@@ -50,9 +50,6 @@ class UsersController < ApplicationController
     erb :'/tweets/user_tweets'
   end
 
-
-
-
   helpers do
     def logged_in?
       !!session[:user_id]
