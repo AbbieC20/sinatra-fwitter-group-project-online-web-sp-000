@@ -1,3 +1,7 @@
 <br>
 <h2> Tweets Index Page </h2>
 <br>
+<% @tweets.each do |tweet| %>
+    <%= tweet.content %>
+    <br>
+<% end %>
