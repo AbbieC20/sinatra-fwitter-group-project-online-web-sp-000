@@ -20,7 +20,7 @@ class TweetsController < ApplicationController
 
 
 
-  Helpers do
+  module AuthHelpers
     def logged_in?
       !!session[:user_id]
     end
@@ -29,5 +29,7 @@ class TweetsController < ApplicationController
       User.find(session[:user_id])
     end
   end
+
+  Helpers AuthHelpers
 
 end
