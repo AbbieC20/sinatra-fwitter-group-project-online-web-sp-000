@@ -10,11 +10,11 @@ class TweetsController < ApplicationController
   end
 
   get "/tweets/new" do
-    if logged_in?
+    # if logged_in?
       erb :'/tweets/new'
-    else
-      redirect '/login'
-    end
+    # else
+    #   redirect '/login'
+    # end
   end
 
 
