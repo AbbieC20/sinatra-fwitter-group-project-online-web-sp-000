@@ -1,7 +1,7 @@
 <br>
 <h3>More Information on this Tweet</h3>
 <p>Tweet Content: <%= @tweet.content %></p>
-<p>Tweet Author: <%= @tweet.user %></p>
+<p>Tweet Author: <%= @tweet.user.name %></p>
 
 <form method="post" action="/tweets/<%= @tweet.id %>">
   <input id="hidden" type="hidden" name="_method" value="DELETE">
